@@ -1,3 +1,5 @@
-nome = input ('Qual seu nome?')
-print('Boas vindas, ', nome)
 print('Olá mundo!')
+pergunta = input ('Qual seu nome?')
+nome = pergunta
+
+print('Boas vindas, ', nome)
