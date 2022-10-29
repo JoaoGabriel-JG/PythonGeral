@@ -1,5 +1,6 @@
 import csv
 import sys
+import ctypes
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import datetime
@@ -15,7 +16,7 @@ mat = np.zeros((12,5), dtype=np.int32)
 
 
 with open('grafico/backlogGeral.csv', 'r') as csvfile:
-    csv.field_size_limit(sys.maxsize)
+    csv.field_size_limit(int(ctypes.c_ulong(-1).value // 2))
     path = csv.reader(csvfile, delimiter=',')
     next(csvfile)
 
