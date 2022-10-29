@@ -1,22 +1,29 @@
 import csv
 import sys
+import numpy as np
 import matplotlib.pyplot as plt
 from datetime import datetime
-from sortedcontainers import sortedList, Sortedset
 
-dates = ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', DEZ]
-qntd = sortedList()
-done = sortedList()
+M = ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ']
+iniciado = ['Planejado', 'Aguardando Subida', 'Acompanhando Prodção', 'Em Ajuste', 'Integrado',
+            'Desenvolvimento', 'Aplicar Integrado','Instalado Pré-Prod', 'Testes Integrado', 'Instalando Integrado',
+            'Aplicar Pacote Pré-Prod', 'Impedimento']
+fechado = ['Done', 'Cancelado']
+naoIniciado = ['New', 'To Do']
+aguardando = ['Grooming', 'Em Especificação']
+informaInsu = ['Revisão Especificação']
+mat = np.zeros
 
-with open ('backlogGeral.csv', 'r') as csvfile:
-    csv.filed_size_limit(sys.maxsize)
+with open('backlogGeral.csv') as csvfile:
+    csv.field_size_limit(sys.maxsize)
     path = csv.reader(csvfile, delimiter = ',')
+    next(csvfile)
 
     for row in path:
-        S = row[3]
-        D = row[7]
+        d = row[7]
+        s = row[6]
 
-    if 'Done' in S:
-        done.Sortedset(S)
+        data = datetime.strptime(d, '%d/%m/%Y %H:%M:%S')
 
-print(S)
+        if s in iniciado:
+            
