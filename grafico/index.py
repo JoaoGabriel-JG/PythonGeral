@@ -2,10 +2,11 @@ import csv
 import sys
 import matplotlib.pyplot as plt
 from datetime import datetime
-from sortedcontainers import sortedList, sortedcontainers
+from sortedcontainers import sortedList, Sortedset
 
 dates = ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', DEZ]
 qntd = sortedList()
+done = sortedList()
 
 with open ('backlogGeral.csv', 'r') as csvfile:
     csv.filed_size_limit(sys.maxsize)
@@ -15,4 +16,7 @@ with open ('backlogGeral.csv', 'r') as csvfile:
         S = row[3]
         D = row[7]
 
-    if 'Done' or 
+    if 'Done' in S:
+        done.Sortedset(S)
+
+print(S)
