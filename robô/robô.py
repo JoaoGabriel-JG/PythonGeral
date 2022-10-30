@@ -11,6 +11,7 @@ pyautogui.press('tab')
 pyautogui.press('tab')
 pyautogui.press('tab')
 pyautogui.press('tab')
+pyautogui.press('tab')
 pyautogui.keyUp('alt')
 
 pyautogui.click(x = 388, y = 291)
@@ -20,4 +21,3 @@ pyautogui.click(x = 412, y = 335)
 pyautogui.write('senhaforte@123')
 
 pyautogui.click(x = 340, y = 475)
-
