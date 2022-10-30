@@ -15,7 +15,7 @@ mat = np.zeros((12,5), dtype=np.int32)
 
 
 
-with open('grafico/backlogGeral.csv', 'r') as csvfile:
+with open('grafico/backlogGeral.csv', 'r', encoding="utf8") as csvfile:
     csv.field_size_limit(int(ctypes.c_ulong(-1).value // 2))
     path = csv.reader(csvfile, delimiter=',')
     next(csvfile)
