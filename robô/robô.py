@@ -1,13 +1,11 @@
 import pyautogui, time
 
-pyautogui.PAUSE = 1.5
+pyautogui.PAUSE = 0.5
 pyautogui.press('win')
 pyautogui.write('Login.xlsx')
 pyautogui.press('enter')
 pyautogui.keyDown('alt')
 time.sleep(2)
-pyautogui.press('tab')
-pyautogui.press('tab')
 pyautogui.press('tab')
 pyautogui.press('tab')
 pyautogui.press('tab')
