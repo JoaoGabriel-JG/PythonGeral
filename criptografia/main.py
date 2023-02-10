@@ -12,7 +12,8 @@ with open('criptografia/num.txt', 'r') as arquivo:
         n = n.replace('\n', '')
         dictionary.update({ char: n })
 
-print(dictionary)
 
+
+# print(dictionary)
 # with open('leozinhoPVP.json', 'w') as arquivo:
 #     json.dump(dictionary, arquivo, ensure_ascii=False, indent=2)
